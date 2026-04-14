@@ -2,8 +2,12 @@
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 }
+window.scrollTo(0, 0);
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Force scroll to top on load
+    window.scrollTo(0, 0);
+    setTimeout(() => window.scrollTo(0, 0), 10);
     const header = document.getElementById('main-header');
     
     // Header Scroll Effect
