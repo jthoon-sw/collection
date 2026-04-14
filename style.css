@@ -355,7 +355,8 @@ footer {
     nav { display: none; }
     
     .hero {
-        height: 40vh; /* 모바일에서 히어로 섹션 높이 조정 */
+        height: auto; /* 고정 높이 제거하여 비율에 맞게 조절 */
+        aspect-ratio: 16 / 9;
         margin-top: 60px;
     }
 
