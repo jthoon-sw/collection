@@ -149,7 +149,7 @@ nav ul li a:hover::after {
     position: relative;
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(15px);
-    padding: 15px 40px; /* 세로 패딩 축소 */
+    padding: 8px 30px; /* 세로 패딩을 최소화하여 글자 크기에 맞춤 */
     border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow-md);
@@ -171,7 +171,7 @@ nav ul li a:hover::after {
 
 /* Text Slider */
 .text-slider {
-    height: 80px; /* 110px에서 80px로 축소 */
+    height: 48px; /* 폰트 크기(약 34px)보다 조금 더 큰 높이로 조정 */
     overflow: hidden;
     position: relative;
 }
@@ -181,7 +181,7 @@ nav ul li a:hover::after {
 }
 
 .slide-item {
-    height: 80px; /* 110px에서 80px로 축소 */
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,9 +189,9 @@ nav ul li a:hover::after {
 
 @keyframes textSlide {
     0%, 28% { transform: translateY(0); }
-    33%, 61% { transform: translateY(-80px); }
-    66%, 96% { transform: translateY(-160px); }
-    100% { transform: translateY(-160px); }
+    33%, 61% { transform: translateY(-48px); }
+    66%, 96% { transform: translateY(-96px); }
+    100% { transform: translateY(-96px); }
 }
 
 /* Shortcuts Section */
@@ -397,14 +397,14 @@ footer {
     }
     
     .text-slider, .slide-item {
-        height: 50px; /* 70px에서 50px로 축소 */
+        height: 30px; /* 모바일 폰트 크기에 맞춰 높이 최소화 */
     }
 
     @keyframes textSlide {
         0%, 28% { transform: translateY(0); }
-        33%, 61% { transform: translateY(-50px); }
-        66%, 96% { transform: translateY(-100px); }
-        100% { transform: translateY(-100px); }
+        33%, 61% { transform: translateY(-30px); }
+        66%, 96% { transform: translateY(-60px); }
+        100% { transform: translateY(-60px); }
     }
 
     .card { padding: 30px 20px; }
