@@ -189,6 +189,7 @@ nav ul li a:hover::after {
     font-weight: 700;
     position: relative;
     display: inline-block;
+    white-space: nowrap; /* 제목이 두 줄로 나뉘지 않도록 설정 */
 }
 
 .section-title h2::after {

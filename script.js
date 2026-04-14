@@ -1,3 +1,8 @@
+// Ensure page starts at top on refresh
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('main-header');
     
