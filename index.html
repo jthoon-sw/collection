@@ -1,193 +1,184 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Pioneer | 바로가기</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>인천경기지역본부 AI 혁신</title>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <!-- Header -->
-    <header id="main-header">
-        <div class="logo">
-            <img src="logo.png" alt="국민건강보험 로고">
-            <div class="logo-text">
-                <span class="red">Digital</span> Pioneer
-            </div>
-        </div>
-    </header>
+  <!-- ══════════════════════════════
+       SPLASH SCREEN
+  ══════════════════════════════ -->
+  <div id="splash" onclick="tapSplash()">
+    <canvas id="aiCanvas"></canvas>
+    <div class="sp-amb" id="spAmb">
+      <div class="sp-blob r"></div>
+      <div class="sp-blob b"></div>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="text-slider">
-                <div class="slide-wrapper">
-                    <div class="slide-item">
-                        <h1>AI·디지털 중심 <span>대국민 서비스 향상</span></h1>
-                    </div>
-                    <div class="slide-item">
-                        <h1>인천경기본부가 <span>선도</span>합니다</h1>
-                    </div>
-                    <!-- 무한 루프를 위한 첫 번째 문구 복제 -->
-                    <div class="slide-item">
-                        <h1>AI·디지털 중심 <span>대국민 서비스 향상</span></h1>
-                    </div>
-                </div>
+    <div class="sp-logo" id="spLogo"><img src="assets/logo.png" alt="로고"></div>
+
+    <div class="sp-copy">
+      <span class="sp-line" id="sl1">현장에서</span>
+      <span class="sp-line" id="sl2">시작한</span>
+      <span class="sp-line" id="sl3"><span class="sp-ai">AI 혁신</span>이</span>
+      <span class="sp-line" id="sl4">공단을 바꿉니다</span>
+    </div>
+
+    <div class="sp-bottom">
+      <div class="sp-track" id="spTrack">
+        <div class="sp-fill" id="spFill"></div>
+      </div>
+      <div class="sp-hint" id="spHint">화면을 터치하세요</div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════ -->
+  <div id="main">
+
+    <!-- 상단 네비게이션 -->
+    <nav class="topnav intro-animate" id="introNav">
+      <div class="nav-brand">
+        <div class="nav-logo"><img src="assets/logo.png" alt="로고"></div>
+        <span class="nav-title"><span style="color: var(--red);">Digital</span> Pioneer</span>
+      </div>
+    </nav>
+
+    <!-- 과제 슬라이더 섹션 -->
+    <section class="section">
+      <div class="sec-head">
+        <div class="eyebrow intro-animate" id="introEyebrow" style="color: var(--gray);">인천경기지역본부가 선도합니다</div>
+        <h2 class="sec-title intro-animate" id="introTitle">현장이 만든 <span style="color: #3B82F6;">AI 혁신</span></h2>
+      </div>
+      <div class="dots-row intro-animate" id="introRest">
+        <div class="dots" id="dots"></div>
+      </div>
+
+      <div class="track intro-animate" id="slider">
+
+        <!-- ★ 카드 1 — NHIS Reminder -->
+        <div class="pc">
+          <div class="thumb">
+            <img src="assets/reminder.jpeg" alt="NHIS Reminder">
+          </div>
+          <div class="cbody">
+            <div class="ct"><span class="type-pill">업무 생산성</span>NHIS Reminder</div>
+            <div class="cd">업무분장만 넣으면 일정이 자동으로.<br>AI 기반 공단형 리마인더</div>
+            <div class="cfooter">
+              <a href="https://drive.google.com/file/d/1_fPvPgjnSM9KLMsMNc72QnRWxSJlMmZM/preview" target="_blank" class="btn-go">자세히 보기 →</a>
             </div>
+          </div>
         </div>
+
+        <!-- ★ 카드 2 — 보안점검표 -->
+        <div class="pc">
+          <div class="thumb">
+            <img src="assets/security.png" alt="보안점검표">
+          </div>
+          <div class="cbody">
+            <div class="ct"><span class="type-pill">보안 관리</span>보안점검표</div>
+            <div class="cd">종이 위의 체크리스트에서<br>실시간 보안 관리 시스템으로</div>
+            <div class="cfooter">
+              <a href="https://jthoon-sw.github.io/NHIS_Security-Checklist/" target="_blank" class="btn-go">체험하기 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ★ 카드 3 — 제한·통제구역 출입자 명부 -->
+        <div class="pc">
+          <div class="thumb">
+            <img src="assets/access.png" alt="출입자 명부">
+          </div>
+          <div class="cbody">
+            <div class="ct"><span class="type-pill">출입 관리</span>제한·통제구역 출입자 명부</div>
+            <div class="cd">수기 대장은 끝.<br>출입 기록을 한 번에 관리합니다</div>
+            <div class="cfooter">
+              <a href="https://lyjin-sw.github.io/NHIS_SECURITY-NAME-BOOK/" target="_blank" class="btn-go">체험하기 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ★ 카드 4 — 차량운행일지 -->
+        <div class="pc">
+          <div class="thumb">
+            <img src="assets/vehicle.jpeg" alt="차량운행일지">
+          </div>
+          <div class="cbody">
+            <div class="ct"><span class="type-pill">차량 관리</span>차량운행일지</div>
+            <div class="cd">출발부터 도착까지,<br>운행의 모든 기록을 하나로</div>
+            <div class="cfooter">
+              <a href="https://www.0230.site/" target="_blank" class="btn-go">체험하기 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ★ 카드 5 — Suwon Map -->
+        <div class="pc">
+          <div class="thumb">
+            <img src="assets/suwonmap.png" alt="Suwon Map">
+          </div>
+          <div class="cbody">
+            <div class="ct"><span class="type-pill">지도 서비스</span>Suwon Map</div>
+            <div class="cd">QR 하나로 가까운 지사를<br>바로 찾아드립니다</div>
+            <div class="cfooter">
+              <a href="https://jthoon-sw.github.io/NHIS-Map/" target="_blank" class="btn-go">체험하기 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ★ 카드 6 — NHIS-Guide -->
+        <div class="pc">
+          <div class="thumb">
+            <img src="assets/guide.jpeg" alt="NHIS-Guide">
+          </div>
+          <div class="cbody">
+            <div class="ct"><span class="type-pill">민원 안내</span>NHIS-Guide</div>
+            <div class="cd">복잡한 서류 안내,<br>이제 디지털로 쉽고 빠르게</div>
+            <div class="cfooter">
+              <a href="https://nhis-guide.vercel.app/" target="_blank" class="btn-go">체험하기 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ★ 카드 7 — 스마트 인경 예산서 -->
+        <div class="pc">
+          <div class="thumb">
+            <img src="assets/budget.jpeg" alt="스마트 인경 예산서">
+          </div>
+          <div class="cbody">
+            <div class="ct"><span class="type-pill">예산 관리</span>스마트 인경 예산서</div>
+            <div class="cd">편성부터 집행까지,<br>예산의 흐름이 한눈에</div>
+            <div class="cfooter">
+              <a href="https://drive.google.com/file/d/1343fqJ4vOAcez4xKaPyw_k_HfgsYf8zt/preview" target="_blank" class="btn-go">자세히 보기 →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ★ 카드 8 — NHIS Game -->
+        <div class="pc">
+          <div class="thumb">
+            <img src="assets/game.jpeg" alt="NHIS Game">
+          </div>
+          <div class="cbody">
+            <div class="ct"><span class="type-pill">팀 빌딩</span>NHIS Game</div>
+            <div class="cd">일할 땐 일하고, 쉴 땐 게임 한 판.<br>건강한 조직의 시작</div>
+            <div class="cfooter">
+              <a href="https://joadela00.github.io/whac-a-mole/index.html" target="_blank" class="btn-go">게임 시작 →</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.track -->
     </section>
 
-    <!-- Shortcuts Section -->
-    <section class="shortcuts">
-        <div class="section-title">
-            <h2>DP Collection</h2>
-        </div>
-        <div class="grid">
-            <!-- Card 1 -->
-            <a href="REMINDER.pdf" target="_blank" type="application/pdf" class="card">
-                <div class="card-image">
-                    <img src="thumb1.jpeg" alt="NHIS-REMINDER 미리보기">
-                </div>
-                <div class="card-body">
-                    <h3>NHIS-REMINDER</h3>
-                    <p>AI 기반 공단형 앱<br>오늘의 할 일 요약·미리 알림, 중요 일정
-                        <br> 고정 및 체크리스트 관리 가능
-                    </p>
-                    <div class="btn-go">바로가기 <span>&rarr;</span></div>
-                </div>
-            </a>
+  </div><!-- /#main -->
 
-            <!-- Card 2 -->
-            <a href="https://jthoon-sw.github.io/NHIS_Security-Checklist/" target="_blank" class="card">
-                <div class="card-image">
-                    <img src="thumb2.png" alt="보안점검표 미리보기">
-                </div>
-                <div class="card-body">
-                    <h3>보안점검표</h3>
-                    <p> 보안점검표 작성 및 관리 디지털화
-                        <br> ※ PDF 출력 시 서식에 맞춰 출력(가로)
-                        <br>
-                        <br> [보완 계획]
-                        <br>NFC 태그 접속, 페이지 유효시간 설정
-                        <br>관리자 페이지 담당/팀장 서명 연동
-                        <br> ※ ID: 180043, PW: 1111 … 추후 변경
-                    </p>
-                    <div class="btn-go">바로가기 <span>&rarr;</span></div>
-                </div>
-            </a>
-
-            <!-- Card 3 -->
-            <a href="https://lyjin-sw.github.io/NHIS_SECURITY-NAME-BOOK/" target="_blank" class="card">
-                <div class="card-image">
-                    <img src="thumb3.png" alt="제한·통제구역 출입자 명부 미리보기">
-                </div>
-                <div class="card-body">
-                    <h3>제한·통제구역 출입자 명부</h3>
-                    <p>출입자 명부 작성 및 관리 디지털화
-                        <br>
-                        <br> ※ 현재 초기단계
-                        <br> ※ PW: 1234 … 추후 변경
-                    </p>
-                    <div class="btn-go">바로가기 <span>&rarr;</span></div>
-                </div>
-            </a>
-
-            <!-- Card 4 -->
-            <a href="https://www.0230.site/" target="_blank" class="card">
-                <div class="card-image">
-                    <img src="thumb4.jpeg" alt="차량운행일지 미리보기">
-                </div>
-                <div class="card-body">
-                    <h3>차량운행일지</h3>
-                    <p> 운행 기록을 하나의 흐름으로 연결하여
-                        <br> 간결하고 정확한 디지털 관리로 전환
-                    </p>
-                    <div class="btn-go">바로가기 <span>&rarr;</span></div>
-                </div>
-            </a>
-
-            <!-- Card 5 -->
-            <a href="https://jthoon-sw.github.io/NHIS-Map/" target="_blank" class="card">
-                <div class="card-image">
-                    <img src="thumb5.png" alt="Suwon Map 미리보기">
-                </div>
-                <div class="card-body">
-                    <h3>Suwon Map</h3>
-                    <p> 지역본부 내방 민원 안내를 위한,
-                        <br> 인근 지사 위치 정보 QR코드 비치
-                    </p>
-                    <div class="btn-go">바로가기 <span>&rarr;</span></div>
-                </div>
-            </a>
-
-            <!-- Card 6 -->
-            <a href="https://nhis-guide.vercel.app/" target="_blank" class="card">
-                <div class="card-image">
-                    <img src="thumb6.jpeg" alt="NHIS-Guide 미리보기">
-                </div>
-                <div class="card-body">
-                    <h3>NHIS-Guide</h3>
-                    <p> 본인부담상한제 제출 서류 안내 등
-                        <br> 원스톱 안내서비스
-                        <br> ※ 업무 전 영역 확대 예정
-                    </p>
-                    <div class="btn-go">바로가기 <span>&rarr;</span></div>
-                </div>
-            </a>
-
-            <!-- Card 7 -->
-            <a href="mod.pdf" target="_blank" type="application/pdf" class="card">
-                <div class="card-image">
-                    <img src="thumb7.JPG" alt="스마트 인경 예산서 미리보기">
-                </div>
-                <div class="card-body">
-                    <h3>스마트 인경 예산서</h3>
-                    <p> 예산 편성부터 집행까지 통합하여
-                        <br>쉽고 정확한 관리로 전환
-                    </p>
-                    <div class="btn-go">바로가기 <span>&rarr;</span></div>
-                </div>
-            </a>
-
-            <!-- Card 8 -->
-            <a href="https://joadela00.github.io/whac-a-mole/index.html" target="_blank" class="card">
-                <div class="card-image">
-                    <img src="thumb8.jpeg" alt="NHIS Game 미리보기">
-                </div>
-                <div class="card-body">
-                    <h3>NHIS Game</h3>
-                    <p>두더지 게임의 단순한 규칙을 바탕으로
-                        <br>직원들이 가볍게 즐기며 스트레스를
-                        <br>해소할 수 있도록 만든 게임
-                    </p>
-                    <div class="btn-go">바로가기 <span>&rarr;</span></div>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <p>경기도 수원시 팔달구 권선로 741 (인계동)<br>Tel: 031-230-7726 | Email: 180043@nhis.or.kr</p>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2026 Digital Pioneer. All rights reserved.
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-    </script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
